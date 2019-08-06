@@ -1,5 +1,6 @@
 package abs.urielight.travelmantics;
 
+
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -25,12 +26,14 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mDatabaseReference;
     private ChildEventListener mChildEventListener;
+    //private static Activity caller;
 
     public DealAdapter(){
-        FirebaseUtil.openFbReferences("traveldeals");
+        //FirebaseUtil.openFbReferences("traveldeals");
         mFirebaseDatabase = FirebaseUtil.mFirebaseDatabase;
         mDatabaseReference = FirebaseUtil.mDatabaseReference;
         deals = FirebaseUtil.mDeals;
+
         mChildEventListener = new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, String s) {
@@ -63,6 +66,7 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
 
             }
         };
+
         mDatabaseReference.addChildEventListener(mChildEventListener);
     }
 
