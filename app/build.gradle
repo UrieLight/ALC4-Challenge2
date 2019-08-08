@@ -29,10 +29,14 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:18.0.1'
     implementation 'com.google.firebase:firebase-storage:18.1.0'
     implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-beta01'
     implementation 'com.google.firebase:firebase-auth:18.1.0'
 
-    implementation 'com.squareup.picasso:picasso:2.5.2'
+//    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation ('com.squareup.picasso:picasso:2.71828'){
+        exclude group: 'com.android.support'
+        exclude module: ['exifinterface', 'support-annotations']
+    }
 }
 
 apply plugin: 'com.google.gms.google-services'
