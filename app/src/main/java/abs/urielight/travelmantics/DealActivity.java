@@ -51,7 +51,7 @@ public class DealActivity extends AppCompatActivity {
         txtDescription = findViewById(R.id.txtDescription);
         txtPrice = findViewById(R.id.txtPrice);
 
-        imageView = findViewById(R.id.imageDeal);
+        imageView = findViewById(R.id.image);
 
 
         //receive deal data from the list activity, when clicked on item
